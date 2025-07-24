@@ -1,0 +1,445 @@
+<html>
+
+<head>
+    <title>Task 7</title>
+    <style>
+        #board {
+            height: 1000px;
+            width: 1000px;
+            border: 1px solid;
+        }
+
+        #row1 {
+            height: 400px;
+        }
+
+        #r1c1 {
+            height: 400px;
+            width: 401px;
+            background-color: red;
+            float: left;
+        }
+
+        #r1c2 {
+            height: 398px;
+            width: 198px;
+            float: left;
+        }
+
+        #part1,
+        #part2,
+        #part3 {
+            height: 400px;
+            width: 66px;
+            float: left;
+        }
+
+        #white {
+            height: 63px;
+            border: 0.5px solid;
+        }
+
+        #green {
+            height: 63px;
+            border: 0.5px solid;
+            background-color: green;
+        }
+
+        #extragreen {
+            height: 65px;
+            background-color: green;
+            border: 0.5px solid;
+        }
+
+        #extrawhite {
+            height: 65px;
+            border: 0.5px solid;
+        }
+
+        #r1c3 {
+            height: 400px;
+            width: 401px;
+            background-color: green;
+            float: left;
+        }
+
+        #innerbox {
+            height: 250px;
+            width: 250px;
+            margin: 75px;
+            background-color: white;
+        }
+
+        #innercirclered {
+            height: 70px;
+            width: 70px;
+            margin: 25px;
+            float: left;
+            border-radius: 50%;
+            background-color: red;
+        }
+
+        #innercirclegreen {
+            height: 70px;
+            width: 70px;
+            margin: 25px;
+            float: left;
+            border-radius: 50%;
+            background-color: green;
+        }
+
+        #row2 {
+            height: 200px;
+        }
+
+        #first {
+            height: 200px;
+            width: 400px;
+            float: left;
+        }
+
+        #f1 {
+            height: 200px;
+            width: 66px;
+            float: left;
+        }
+
+        #r2w {
+            height: 62px;
+            width: 66px;
+            border: 0.5px solid;
+        }
+
+        #r2rextra {
+            height: 62px;
+            width: 66px;
+            border: 0.5px solid;
+            background-color: red;
+        }
+
+        #r2wextra {
+            height: 66px;
+            width: 66px;
+            border: 0.5px solid;
+        }
+
+        #r2r {
+            height: 66px;
+            width: 66px;
+            border: 0.5px solid;
+            background-color: red;
+        }
+
+        #second {
+            height: 200px;
+            width: 200px;
+            float: left;
+        }
+
+        #left{
+            height: 200px;
+            width: 100px;
+            float: left;
+            background-color: red;
+        }
+
+        #right{
+            height: 200px;
+            width: 100px;
+            float: right;
+            background-color: yellow;
+        }
+
+        #green1{
+            border-top: 100px solid green;
+            border-left: 100px solid transparent;
+        }
+
+        #green2{
+            border-top: 100px solid green;
+            border-right: 100px solid transparent;
+        }
+
+        #blue1{
+            border-bottom: 101px solid blue;
+            border-left: 100px solid transparent;
+        }
+
+        #blue2{
+            border-bottom: 101px solid blue;
+            border-right: 100px solid transparent;
+        }
+
+        #third {
+            height: 200px;
+            width: 400px;
+            float: left;
+        }
+
+        #r2y {
+            height: 66px;
+            width: 66px;
+            border: 0.5px solid;
+            background-color: yellow;
+        }
+
+        #r2yextra {
+            height: 62px;
+            width: 66px;
+            border: 0.5px solid;
+            background-color: yellow;
+        }
+
+        #r3c1 {
+            height: 400px;
+            width: 401px;
+            background-color: blue;
+            float: left;
+        }
+
+        #r3c2 {
+            height: 398px;
+            width: 198px;
+            float: left;
+        }
+
+        #r3c3 {
+            height: 400px;
+            width: 401px;
+            background-color: yellow;
+            float: left;
+        }
+
+        #innercircleblue {
+            height: 70px;
+            width: 70px;
+            margin: 25px;
+            float: left;
+            border-radius: 50%;
+            background-color: blue;
+        }
+
+        #innercircleyellow {
+            height: 70px;
+            width: 70px;
+            margin: 25px;
+            float: left;
+            border-radius: 50%;
+            background-color: yellow;
+        }
+
+        #extrablue {
+            height: 65px;
+            background-color: blue;
+            border: 0.5px solid;
+        }
+
+        #blue {
+            height: 63px;
+            border: 0.5px solid;
+            background-color: blue;
+        }
+
+        .fa-star{
+            margin: 9px;
+            font-size: 40px;
+        }
+        
+        .fa-arrow-down{
+            font-size: 45px;
+            margin: 12px;
+            color: green;
+        }
+        
+        .fa-arrow-up{
+            font-size: 45px;
+            margin: 12px;
+            color: blue;
+        }
+        
+        .fa-arrow-left{
+            font-size: 45px;
+            margin: 12px;
+            color: yellow;
+        }
+        
+        .fa-arrow-right{
+            font-size: 45px;
+            margin: 12px;
+            color: red;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="board">
+        <div id="row1">
+            <div id="r1c1">
+                <div id="innerbox">
+                    <div id="innercirclered"></div>
+                    <div id="innercirclered"></div>
+                    <div id="innercirclered"></div>
+                    <div id="innercirclered"></div>
+                </div>
+            </div>
+            <div id="r1c2">
+                <div id="part1">
+                    <div id="white"></div>
+                    <div id="white"></div>
+                    <div id="white"></div>
+                    <div id="white"></div>
+                    <div id="white"></div>
+                    <div id="extrawhite"></div>
+                </div>
+                <div id="part2">
+                    <div id="white"></div>
+                    <div id="green"></div>
+                    <div id="green"></div>
+                    <div id="green"></div>
+                    <div id="green"></div>
+                    <div id="extragreen"></div>
+                </div>
+                <div id="part3">
+                    <div id="white"></div>
+                    <div id="green"></div>
+                    <div id="white"></div>
+                    <div id="white"></div>
+                    <div id="white"></div>
+                    <div id="extrawhite"></div>
+                </div>
+            </div>
+            <div id="r1c3">
+                <div id="innerbox">
+                    <div id="innercirclegreen"></div>
+                    <div id="innercirclegreen"></div>
+                    <div id="innercirclegreen"></div>
+                    <div id="innercirclegreen"></div>
+                </div>
+            </div>
+        </div>
+        <div id="row2">
+            <div id="first">
+                <div id="f1">
+                    <div id="r2w"></div>
+                    <div id="r2wextra"></div>
+                    <div id="r2w"></div>
+                </div>
+                <div id="f1">
+                    <div id="r2rextra"></div>
+                    <div id="r2r"></div>
+                    <div id="r2w"></div>
+                </div>
+                <div id="f1">
+                    <div id="r2w"></div>
+                    <div id="r2r"></div>
+                    <div id="r2w"></div>
+                </div>
+                <div id="f1">
+                    <div id="r2w"></div>
+                    <div id="r2r"></div>
+                    <div id="r2w"></div>
+                </div>
+                <div id="f1">
+                    <div id="r2w"></div>
+                    <div id="r2r"></div>
+                    <div id="r2w"></div>
+                </div>
+                <div id="f1">
+                    <div id="r2w"></div>
+                    <div id="r2r"></div>
+                    <div id="r2w"></div>
+                </div>
+
+            </div>
+            <div id="second">
+                <div id="left">
+                    <div id="green1"></div>
+                    <div id="blue1"></div>
+                </div>
+                <div id="right">
+                    <div id="green2"></div>
+                    <div id="blue2"></div>
+                </div>
+            </div>
+            <div id="third">
+                <div id="f1">
+                    <div id="r2w"></div>
+                    <div id="r2y"></div>
+                    <div id="r2w"></div>
+                </div>
+                <div id="f1">
+                    <div id="r2w"></div>
+                    <div id="r2y"></div>
+                    <div id="r2w"></div>
+                </div>
+                <div id="f1">
+                    <div id="r2w"></div>
+                    <div id="r2y"></div>
+                    <div id="r2w"></div>
+                </div>
+                <div id="f1">
+                    <div id="r2w"></div>
+                    <div id="r2y"></div>
+                    <div id="r2w"></div>
+                </div>
+                <div id="f1">
+                    <div id="r2w"></div>
+                    <div id="r2y"></div>
+                    <div id="r2yextra"></div>
+                </div>
+                <div id="f1">
+                    <div id="r2w"></div>
+                    <div id="r2wextra"></div>
+                    <div id="r2w"></div>
+                </div>
+            </div>
+        </div>
+        <div id="row3">
+            <div id="r3c1">
+                <div id="innerbox">
+                    <div id="innercircleblue"></div>
+                    <div id="innercircleblue"></div>
+                    <div id="innercircleblue"></div>
+                    <div id="innercircleblue"></div>
+                </div>
+            </div>
+            <div id="r3c2">
+                <div id="part1">
+                    <div id="extrawhite"></div>
+                    <div id="white"></div>
+                    <div id="white"></div>
+                    <div id="white"></div>
+                    <div id="blue"></div>
+                    <div id="white"></div>
+                </div>
+                <div id="part2">
+                    <div id="extrablue"></div>
+                    <div id="blue"></div>
+                    <div id="blue"></div>
+                    <div id="blue"></div>
+                    <div id="blue"></div>
+                    <div id="white"></div>
+                </div>
+                <div id="part3">
+                    <div id="extrawhite"></div>
+                    <div id="white"></div>
+                    <div id="white"></div>
+                    <div id="white"></div>
+                    <div id="white"></div>
+                    <div id="white"></div>
+                </div>
+            </div>
+            <div id="r3c3">
+                <div id="innerbox">
+                    <div id="innercircleyellow"></div>
+                    <div id="innercircleyellow"></div>
+                    <div id="innercircleyellow"></div>
+                    <div id="innercircleyellow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
