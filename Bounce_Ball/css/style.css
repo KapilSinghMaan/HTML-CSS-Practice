@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+}
+
+#container{
+    height: 70vh;
+    width: 90vw;
+    background-color: blue;
+    border: 1px solid;
+    position: relative;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: Xtry 8s linear 0s infinite alternate, Ytry 2s ease-out 0s infinite alternate;
+     /* Ytry 2s ease-out 0s infinite alternate; */
+}
+
+/* @keyframes trytry {
+
+    0%{
+
+    }
+    10%{
+        transform: translateY(-200px) translateX(120px);
+    }
+    20%{
+        transform: translateY(0px) translateX(240px);
+    }
+    
+    30%{
+        transform: translateY(-200px) translateX(360px);
+    }
+    40%{
+        transform: translateY(0px) translateX(480px);
+    }
+    
+    50%{
+        transform: translateY(-200px) translateX(600px);
+    }
+    60%{
+        transform: translateY(0px) translateX(720px);
+    }
+    
+    70%{
+        transform: translateY(-200px) translateX(840px);
+    }
+    80%{
+        transform: translateY(0px) translateX(960px);
+    }
+    
+    90%{
+        transform: translateY(-200px) translateX(1080px);
+    }
+    100%{
+        transform: translateY(0px) translateX(1200px);
+    }
+} */
+
+@keyframes Xtry{
+    from{
+        left: 0;
+    }
+    to{
+        left: 90%;
+    }
+}
+
+@keyframes Ytry{
+    from{
+        bottom: 0;
+    }
+    to{
+        bottom: 80%;
+    }
+}
