@@ -33,3 +33,26 @@ body {
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
 }
+
+.outer::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    height: 420px;
+    width: 380px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
