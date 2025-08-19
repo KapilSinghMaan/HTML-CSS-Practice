@@ -56,3 +56,21 @@ body {
         transform: rotate(360deg);
     }
 }
+
+.outer form{
+    position: absolute;
+    inset: 4px;
+    padding: 50px 40px;
+    z-index: 2;
+    background: #222;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+}
+
+.outer form h2{
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
