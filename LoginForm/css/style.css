@@ -74,3 +74,25 @@ body {
     letter-spacing: 0.1em;
     font-weight: 500;
 }
+
+.outer form .inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 30px;
+}
+
+.outer form .inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #000;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+    transition: 0.5s;
+    /* border: 1px solid red; */
+}
