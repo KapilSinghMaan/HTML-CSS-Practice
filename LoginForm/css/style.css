@@ -136,3 +136,32 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+.links a{
+    text-decoration: none;
+    color: #8f8f8f;
+    margin: 20px 0px;
+}
+
+.links a:hover{
+    color: #fff;
+    text-shadow: 2px 2px blue;
+}
+
+.outer form input[type="submit"]{
+    border-radius: 11px;
+    padding: 10px 5px;
+    font-size: large;
+    letter-spacing: 0.05em;
+    border: none;
+    outline: none;
+    background-color: aqua;
+    width: 100px;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.outer form input[type="submit"]:active{
+    opacity: 0.6;
+}
