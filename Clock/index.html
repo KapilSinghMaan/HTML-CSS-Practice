@@ -1,16 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clock</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div id="clock">
         <div id="hrDots"></div>
         <div id="minDots"></div>
         <div id="secDots"></div>
     </div>
+
+    <script>
+
+        function clock() {
+            let hrDots = document.getElementById('hrDots');
+            let minDots = document.getElementById('minDots');
+            let secDots = document.getElementById('secDots');
+
+            var date = new Date();
+
+            var hours = date.getHours() % 12;
+            var amPm = date.getHours() >= 12 ? 'PM' : 'AM';
+            hours = hours === 0 ? 12 : hours;
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+
+            var secondDots = '';
+            for (var i = 1; i < 61; i++) {
+                var rotation = i * 6;
+                if (i === seconds) {
+                    secondDots += '<div class="dot active" style="transform:rotate(' + rotation + 'deg)"></div>'
+                }
+                else {
+                    secondDots += '<div class="dot" style="transform:rotate(' + rotation + 'deg)"></div>'
+                }
+            }
+
+            secDots.innerHTML =secondDots+ '<b>' + amPm + '</b>' + '<h2>' + addZero(seconds) + '<br/><span>Seconds</span>' + '</h2>';
+            minDots.innerHTML = '<h2>' + addZero(minutes) + '<br/><span>Minutes</span>' + '</h2>';
+            hrDots.innerHTML = '<h2>' + addZero(hours) + '<br/><span>Hours</span>' + '</h2>';
+        }
+
+        function addZero(number) {
+            if (number < 10) {
+                return '0' + number;
+            }
+            return number;
+        }
+
+        setInterval(clock, 1000);
+
+    </script>
 </body>
+
 </html>
