@@ -92,7 +92,8 @@ body{
 }
 
 #secDots .dot,
-#minDots .dot{
+#minDots .dot,
+#hrDots .dot{
     position: absolute;
     top: 50%;
     left: -30%;
@@ -110,6 +111,11 @@ body{
     background: var(--minClr);
 }
 
+#hrDots .dot{
+    background: var(--hrClr);
+    /* height: 2px; */
+}
+
 #secDots .active.dot{
     background: var(--secClr);
     box-shadow: 0 0 10px var(--secClr),0 0 20px var(--secClr),0 0 30px var(--secClr);
@@ -120,12 +126,40 @@ body{
     box-shadow: 0 0 10px var(--minClr),0 0 20px var(--minClr),0 0 30px var(--minClr);
 }
 
+#hrDots .active.dot{
+    background: var(--hrClr);
+    box-shadow: 0 0 10px var(--hrClr),0 0 20px var(--hrClr),0 0 30px var(--hrClr);
+}
+
 #secDots .active.dot~.dot,
-#minDots .active.dot~.dot{
+#minDots .active.dot~.dot,
+#hrDots .active.dot~.dot{
     background-color: #555;
 }
 
 #secDots .dot:nth-child(5n+5),
 #minDots .dot:nth-child(5n+5){
     width: 14px;
+}
+
+#hrDots .dot:nth-child(3n+3){
+    width: 15px;
+}
+
+#hrDots .dot::before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    margin: 1px;
+    top: 4.5px;
+    width: 4px;
+    height: 4px;
+    border-radius: 4px;
+    background: var(--hrClr);
+    box-shadow: 1px 7px var(--hrClr),3px 14px var(--hrClr),5px 20px var(--hrClr);
+}
+
+#hrDots .dot.active~.dot::before{
+    background: #555;
+    box-shadow: 1px 7px #555,3px 14px #555,5px 20px #555;
 }
