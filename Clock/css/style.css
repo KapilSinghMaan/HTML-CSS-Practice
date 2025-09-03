@@ -91,14 +91,23 @@ body{
     color: var(--secClr);
 }
 
-#secDots .dot{
+#secDots .dot,
+#minDots .dot{
     position: absolute;
     top: 50%;
     left: -30%;
     width: 10px;
     height: 3px;
-    background: var(--secClr);
     transform-origin:65px ;
+    border-radius: 5px;
+}
+
+#secDots .dot{
+    background: var(--secClr);
+}
+
+#minDots .dot{
+    background: var(--minClr);
 }
 
 #secDots .active.dot{
@@ -106,6 +115,17 @@ body{
     box-shadow: 0 0 10px var(--secClr),0 0 20px var(--secClr),0 0 30px var(--secClr);
 }
 
-#secDots .active.dot~.dot{
+#minDots .active.dot{
+    background: var(--minClr);
+    box-shadow: 0 0 10px var(--minClr),0 0 20px var(--minClr),0 0 30px var(--minClr);
+}
+
+#secDots .active.dot~.dot,
+#minDots .active.dot~.dot{
     background-color: #555;
+}
+
+#secDots .dot:nth-child(5n+5),
+#minDots .dot:nth-child(5n+5){
+    width: 14px;
 }
