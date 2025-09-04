@@ -133,7 +133,8 @@ body{
 
 #secDots .active.dot~.dot,
 #minDots .active.dot~.dot,
-#hrDots .active.dot~.dot{
+#hrDots .active.dot~.dot
+{
     background-color: #555;
 }
 
