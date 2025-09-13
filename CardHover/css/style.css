@@ -1,0 +1,28 @@
+body{
+    background: linear-gradient(45deg,#00bcd4,#ffeb3b);
+}
+
+.dash-card{
+    height: 18em;
+    width: 20em;
+    transition: 0.5s;
+    &:hover{
+        /* height: 30em; */
+        transform: scaleY(1.2);
+    }
+}
+
+.dash-card .imgbox{
+    position: absolute;
+    top: 1em;
+    height: 12em;
+    width: 18em;
+    border-radius: 11px;
+    background: #000;
+    transition: 0.5s;
+}
+
+.dash-card:hover .imgbox{
+    top: -4em;
+    transform: scaleY(0.75) scaleX(0.85);
+}
