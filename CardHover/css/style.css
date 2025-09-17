@@ -8,7 +8,7 @@ body{
     transition: 0.5s;
     &:hover{
         /* height: 30em; */
-        transform: scaleY(1.2);
+        transform: scaleY(1.2) scaleX(1.1);
     }
 }
 
@@ -22,7 +22,40 @@ body{
     transition: 0.5s;
 }
 
+.imgbox i{
+    font-size: 5em;
+}
+
 .dash-card:hover .imgbox{
     top: -4em;
     transform: scaleY(0.75) scaleX(0.85);
+}
+
+.content{
+    top: 14em;
+    height: 3em;
+    overflow: hidden;
+    transition: 0.5s;
+    text-align: justify;
+}
+
+.dash-card:hover .content{
+    top: 6em;
+    height: 10.5em;
+}
+
+.content h2{
+    color: var(--clr);
+    text-align: center;
+    margin-top: 2px;
+}
+
+.content a{
+    /* position: relative; */
+    /* top: 10px; */
+    display: inline-block;
+    background: var(--clr);
+    padding: 8px 15px;
+    font-weight: 500;
+    border-radius: 7px;
 }
