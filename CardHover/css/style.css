@@ -7,7 +7,6 @@ body{
     width: 20em;
     transition: 0.5s;
     &:hover{
-        /* height: 30em; */
         transform: scaleY(1.2) scaleX(1.1);
     }
 }
@@ -51,8 +50,6 @@ body{
 }
 
 .content a{
-    /* position: relative; */
-    /* top: 10px; */
     display: inline-block;
     background: var(--clr);
     padding: 8px 15px;
