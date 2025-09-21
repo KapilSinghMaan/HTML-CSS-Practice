@@ -1,0 +1,48 @@
+.container-fluid {
+    background: #161623;
+}
+
+.calendar-box {
+    /* position: relative; */
+    height: 30em;
+    width: 30em;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#mycalendar {
+    width: 100%;
+    padding: 1em;
+}
+
+#mycalendar table {
+    width: 100%;
+    margin-top: 3em;
+    /* border-spacing: 5px; */
+}
+
+#mycalendar table tr:nth-child(1) td {
+    background: #fff;
+    color: #000;
+    border-radius: 5px;
+    /* border-spacing: 3px; */
+    font-weight: 500;
+}
+
+#mycalendar table td {
+    color: #fff;
+    padding: 0.75em;
+    border-radius: 6px;
+
+    &:hover {
+        background-color: #fff;
+        color: #000 !important;
+    }
+}
+
+.dycalendar-month-container .dycalendar-today-date,
+.dycalendar-month-container .dycalendar-target-date {
+    background: #fff !important;
+    color: #000 !important;
+}
