@@ -1,9 +1,10 @@
 .container-fluid {
-    background: #161623;
+    /* background: #161623; */
+    background: #333;
 }
 
 .calendar-box {
-    /* position: relative; */
+    position: relative;
     height: 30em;
     width: 30em;
     background-color: rgba(255, 255, 255, 0.1);
@@ -11,26 +12,55 @@
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-#mycalendar {
+#dycalendar{
     width: 100%;
-    padding: 1em;
+    padding: 20px;
 }
 
-#mycalendar table {
+#dycalendar table{
     width: 100%;
-    margin-top: 3em;
-    /* border-spacing: 5px; */
+    margin-top: 2em;
+    /* border-spacing: 15px; */
 }
 
-#mycalendar table tr:nth-child(1) td {
-    background: #fff;
-    color: #000;
-    border-radius: 5px;
-    /* border-spacing: 3px; */
+table tbody tr:nth-child(1){
+    display: flex;
+    gap: 10px;
+}
+
+#first-row td
+{
+    background-color: #fff;
+    color: #000 !important;
+    border-radius: 4px;
     font-weight: 500;
 }
 
-#mycalendar table td {
+#dycalendar table td{
+    color: #fff;
+    padding: 0.75em;
+}
+
+/* #mycalendar {
+    width: 100%;
+    padding: 1em;
+} */
+
+/* #mycalendar table { */
+    /* width: 100%; */
+    /* margin-top: 3em; */
+    /* border-spacing: 5px; */
+/* } */
+
+/* #mycalendar table tr:nth-child(1) td {
+    background: #fff;
+    color: #000;
+    border-radius: 5px; */
+    /* border-spacing: 3px; */
+    /* font-weight: 500; */
+/* } */
+
+/* #mycalendar table td {
     color: #fff;
     padding: 0.75em;
     border-radius: 6px;
@@ -45,4 +75,4 @@
 .dycalendar-month-container .dycalendar-target-date {
     background: #fff !important;
     color: #000 !important;
-}
+} */
