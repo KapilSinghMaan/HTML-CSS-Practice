@@ -44,7 +44,8 @@
 
         table = document.createElement("table");
         tr = document.createElement("tr");
-
+        
+        tr.id="first-row";
         //create 1st row for the day letters
         for (c = 0; c <= 6; c = c + 1) {
             td = document.createElement("td");
