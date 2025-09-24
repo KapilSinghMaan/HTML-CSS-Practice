@@ -39,21 +39,21 @@
     function createMonthTable(data, option) {
 
         var
-            table, tr, td,
+            table, tr, td, thead, tbody,
             r, c, count;
 
         table = document.createElement("table");
+        thead=document.createElement("thead");
+        tbody=document.createElement("tbody");
         tr = document.createElement("tr");
-        
-        tr.id="first-row";
         //create 1st row for the day letters
         for (c = 0; c <= 6; c = c + 1) {
             td = document.createElement("td");
             td.innerHTML = "SMTWTFS"[c];
             tr.appendChild(td);
         }
-        table.appendChild(tr);
-
+        thead.appendChild(tr);
+        table.appendChild(thead);
         //create 2nd row for dates
         tr = document.createElement("tr");
 
@@ -81,14 +81,15 @@
             count = count + 1;
             c = c + 1;
         }
-        table.appendChild(tr);
+        tbody.appendChild(tr);
 
         //create remaining rows
         for (r = 3; r <= 7; r = r + 1) {
             tr = document.createElement("tr");
             for (c = 0; c <= 6; c = c + 1) {
                 if (count > data.totaldays) {
-                    table.appendChild(tr);
+                    tbody.appendChild(tr);
+                    table.appendChild(tbody);
                     return table;
                 }
                 td = document.createElement('td');
@@ -102,8 +103,9 @@
                 count = count + 1;
                 tr.appendChild(td);
             }
-            table.appendChild(tr);
+            tbody.appendChild(tr);
         }
+        table.appendChild(tbody);
 
         return table;
     }
