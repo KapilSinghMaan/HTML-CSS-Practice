@@ -43,7 +43,7 @@ body {
         width: 0.75em;
         height: 0.75em;
         background-color: #2f363e;
-        border: 3px solid white;
+        border: 2px solid white;
         border-radius: 50%;
         z-index: 100;
     }
